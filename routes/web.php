@@ -10,7 +10,7 @@ use App\Http\Middleware\CekLogin;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 })->middleware(CekLogin::class);
 
 Route::get('login', [LoginController::class, 'login'])->name('login');
