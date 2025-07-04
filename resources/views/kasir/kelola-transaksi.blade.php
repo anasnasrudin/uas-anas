@@ -20,9 +20,9 @@
             {{ $errors->first() }}
         </div>
     @endif
-    <div class="container-fluid bg-white pt-4 pb-4">
-        <h2 class="text-center fw-bold">Form Transaksi</h2>
-        <div class="text-center">
+    <div class="container-fluid bg-white pb-4">
+        <h2 class="ms-4 fw-bold">Form Transaksi</h2>
+        <div class="ms-4">
             <span class="badge text-bg-danger fw-semibold">
                 {{ Auth::guard('udin')->user()->nama }}
             </span>
@@ -35,7 +35,7 @@
             <input type="hidden" name="nama_barang" id="nama_barang">
             <div class="row">
                 <div class="col-md-6 d-flex flex-column align-items-center">
-                    <div style="width: 100%;">
+                    <div style="width: 90%;">
                         <label class="form-label fw-semibold">Pilih Menu</label>
                         <select class="form-select bg-body-secondary" name="menu_id" id="menu_id"
                             style="background-color: #e6ecf1;">
@@ -52,8 +52,8 @@
                             readonly style="background-color: #e6ecf1;">
                     </div>
                 </div>
-                <div class="col-md-6 d-flex flex-column align-items-center">
-                    <div style="width: 100%;">
+                <div class="col-md-6 d-flex flex-column">
+                    <div style="width: 90%;">
                         <label class="form-label fw-semibold">Quantitas</label>
                         <input type="number" id="quantitas" name="jumlah" class="form-control bg-body-secondary"
                             style="background-color: #e6ecf1;">
@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-4 d-flex justify-content-center">
+            <div class="mt-4" style="margin-left: 68%">
                 <button type="submit" name="action" value="tambah" class="btn btn-info fw-semibold me-2"
                     style="width: 120px">Tambah</button>
                 <button type="submit" name="action" value="reset" class="btn btn-info fw-semibold"
@@ -99,8 +99,8 @@
             </table>
         </div>
         @php $total_harga = collect($keranjang)->sum('subtotal'); @endphp
-        <div class="row">
-            <div class="col-md-6">
+        <div class="row" style="margin-left: 35px">
+            <div class="col-md-5">
                 <form action="" method="POST">
                     @csrf
                     <input type="hidden" name="action" value="bayar">
@@ -130,10 +130,10 @@
                     @csrf
                     <input type="hidden" name="action" value="simpan">
                     <input type="hidden" name="total_harga" value="{{ $total_harga }}">
-                    <div class="d-flex align-items-end gap-2 mt-5">
+                    <div class="d-flex align-items-end gap-2" style="margin-top: 97px; margin-left: 100px;">
                         <button type="button" id="btn-print" class="btn btn-info fw-semibold"
-                            style="width: 200px;">Print</button>
-                        <button type="submit" class="btn btn-info fw-semibold" style="width: 200px;">Simpan</button>
+                            style="width: 150px;">Print</button>
+                        <button type="submit" class="btn btn-info fw-semibold" style="width: 150px;">Simpan</button>
                     </div>
                 </form>
             </div>
