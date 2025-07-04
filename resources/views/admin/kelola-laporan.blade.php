@@ -50,7 +50,6 @@
                 </tbody>
             </table>
         </div>
-        
         <div class="d-flex justify-content-end mt-3 pe-2">
             {{ $data_transaksi->withQueryString()->links('pagination::bootstrap-4') }}
         </div>

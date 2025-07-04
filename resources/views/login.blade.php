@@ -24,7 +24,7 @@
                     {{ $errors->first() }}
                 </div>
             @endif
-            <form action="{{ url('login') }}" method="post">
+            <form action="" method="post">
                 @csrf
                 <div class="d-flex justify-content-center">
                     <img src="/assets/img/store.png" alt="Store Image" width="150">

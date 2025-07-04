@@ -82,7 +82,6 @@
                 </div>
             </div>
         </form>
-
         <div class="mt-3" style="width: 389px; margin-left: 36px">
             <form action="" method="get">
                 <div class="input-group">
@@ -94,7 +93,6 @@
                 </div>
             </form>
         </div>
-
         <div class="table-responsive mt-4">
             <table class="table table-bordered text-center" id="user_table">
                 <thead class="table-light">
